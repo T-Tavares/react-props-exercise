@@ -1,0 +1,72 @@
+/* ------------------ MAIN HEADER BLOCK ----------------- */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* ----------------------- NAVBAR ----------------------- */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    width: 100%;
+}
+
+.logo {
+    width: 120px;
+}
+
+.header-menu {
+}
+.header-menu ul {
+    display: flex;
+    gap: 20px;
+}
+.header-menu ul li {
+    list-style: none;
+    font-size: 12px;
+}
+
+.acc-menu {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+.acc-menu svg {
+    font-size: 25px;
+}
+
+/* ---------------------- PAGE INFO --------------------- */
+
+.page-info {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-weight: 400;
+}
+
+.genre-pick {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    margin: 0 50px;
+    padding: 5px 20px;
+    height: 25px;
+    line-height: 0;
+
+    border-radius: 1px;
+    border: 1px solid #fff;
+    background-color: #000;
+    color: #fff;
+}
+.genre-pick svg {
+    font-size: 25px;
+}
