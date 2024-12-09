@@ -11,5 +11,12 @@ body {
     padding: 20px;
     background: linear-gradient(#000 20px, #111 10%);
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.movies-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 40px 20px;
+    flex-wrap: wrap;
 }

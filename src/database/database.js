@@ -1,4 +1,4 @@
-const data = [
+const database = [
     {
         title: 'Everything Everywhere All at Once',
         year: '2022',
@@ -469,4 +469,4 @@ const data = [
     },
 ];
 
-export default data;
+export default database;
