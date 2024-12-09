@@ -8,9 +8,17 @@ function App() {
         <>
             <Header />
             <div className="movies-gallery">
-                {database.map(movie => {
+                {database.map((movie, index) => {
                     const {title, genre, runTime, poster} = movie;
-                    return <MovieCard key={movie.id} title={title} genre={genre} runTime={runTime} poster={poster} />;
+                    return (
+                        <MovieCard
+                            key={movie.title + index}
+                            title={title}
+                            genre={genre}
+                            runTime={runTime}
+                            poster={poster}
+                        />
+                    );
                 })}
             </div>
         </>
