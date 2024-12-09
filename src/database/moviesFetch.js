@@ -6,7 +6,6 @@
 import fs from 'fs';
 
 const database = [];
-
 const moviesList = [
     'Everything Everywhere All At Once',
     'The Batman',
@@ -28,27 +27,27 @@ const moviesList = [
     'The Marvels',
     'Ant-Man and the Wasp: Quantumania',
     'Nope',
-    'The Boy and the Heron',
     'Talk to Me',
     'Poor Things',
     'Anatomy of a Fall',
     'Creed III',
     'The Banshees of Inisherin',
     'Pinocchio',
-    'Nope',
     'The Woman King',
     'Everything Everywhere All at Once',
-    'Black Panther: Wakanda Forever',
-    'Avatar: The Way of Water',
     'Puss in Boots: The Last Wish',
     'Glass Onion: A Knives Out Mystery',
-    'The Batman',
-    'Top Gun: Maverick',
     'Thor: Love and Thunder',
     'Doctor Strange in the Multiverse of Madness',
-    'The Whale',
     'Women Talking',
 ];
+
+// ------- REMOVING DUPLICATES FROM LIST OF MOVIES ------ //
+const uniqueMoviesList = moviesList.filter((title, i, arr) => arr.indexOf(title) === i);
+
+// ------------------------------------------------------ //
+// ------------------ FETCHING FUNCTION ----------------- //
+// ------------------------------------------------------ //
 
 async function fetchMovies(moviesList) {
     const lowTitles = moviesList.map(title => title.toLowerCase().replaceAll(' ', '+'));
@@ -73,8 +72,8 @@ async function fetchMovies(moviesList) {
 }
 
 async function saveMoviesDB() {
-    await fetchMovies(moviesList);
-    fs.writeFileSync('movies.js', JSON.stringify(database, null, 2));
+    await fetchMovies(uniqueMoviesList);
+    fs.writeFileSync('./database.js', JSON.stringify(database, null, 2));
 }
 
 saveMoviesDB();
